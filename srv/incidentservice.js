@@ -9,8 +9,8 @@ const FieldControl = {
     Optional: 3,
     ReadOnly: 1,
     Inapplicable: 0,
-  };
-  
+};
+
 module.exports = cds.service.impl(async function (srv) {
     const {
         Incidents,
@@ -88,4 +88,11 @@ module.exports = cds.service.impl(async function (srv) {
             req.error(400, "Enter an Incident Identifier", "in/identifier");
         }
     }
+
+    function change_status(req) {
+        debugger
+    }
+    srv.on("process_status", async (req) => {
+        debugger
+    })
 })
