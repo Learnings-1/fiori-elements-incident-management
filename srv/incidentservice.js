@@ -95,4 +95,7 @@ module.exports = cds.service.impl(async function (srv) {
     srv.on("process_status", async (req) => {
         debugger
     })
+    srv.on("update_status", async (req) => {
+        debugger
+    })
 })

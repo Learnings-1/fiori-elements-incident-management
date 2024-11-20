@@ -38,6 +38,11 @@ annotate service.Incidents with @(
             InvocationGrouping: #ChangeSet
         },
         {
+            $Type : 'UI.DataFieldForAction',
+            Action: 'IncidentService.EntityContainer/update_status',
+            Label : 'Update Status'
+        },
+        {
             $Type            : 'UI.DataField',
             Value            : identifier,
             ![@UI.Importance]: #High,

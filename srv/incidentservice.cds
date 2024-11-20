@@ -5,8 +5,11 @@ service IncidentService {
     @odata.draft.enabled
     entity Incidents               as projection on cloud.Incidents
         actions {
-            action process_status()
+            action process_status();
         }
+
+    action update_status(Idenfier : String  @UI.MultiLineText:true  @Common.Label:'Identifer'  );
+    // action update_status(dataInicial : Date @Common.Label:'Start Date' );
 
     @readonly
     entity IncidentFlow            as projection on cloud.IncidentFlow;
@@ -22,5 +25,6 @@ service IncidentService {
 
     @readonly
     entity Priority                as projection on cloud.Priority;
+
 
 }
