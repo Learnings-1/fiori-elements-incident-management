@@ -28,6 +28,7 @@ annotate service.Incidents with @(
         incidentStatus_code,
         priority_code,
         category_code,
+        identifier,
     ],
     UI.LineItem                      : [
         {
